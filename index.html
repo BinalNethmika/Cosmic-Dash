@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Space Rush</title>
+    <script src="./app/app.js" defer></script>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: monospace;
+        box-sizing: border-box;
+        background-size: cover;
+        background-position: center;
+        color: white;
+      }
+      body {
+        overflow: hidden;
+        background: rgb(0, 0, 0);
+      }
+      input {
+        color: black;
+      }
+      #ctrlDash > button {
+        padding: 10px;
+        cursor: pointer;
+        background: #222;
+      }
+      #ctrlDash > h3 {
+        margin-bottom: 20px;
+      }
+      #help > ol > li {
+        margin-block: 20px;
+      }
+      #help > ol > li > p {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas
+      style="background-image: url(./path/sky-2.png)"
+      id="canvas"
+    ></canvas>
+    <div
+      id="footer"
+      style="
+        width: 100%;
+        height: 5dvh;
+        background: rgb(0, 0, 0);
+        position: absolute;
+        bottom: 0;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-inline: 50px;
+      "
+    >
+      <p style="color: white">&copy; SBVAS|24</p>
+      <p style="color: white">
+        Programmed By-B.S.M Sayuni Kusalya|B.S.M Binal Nethmika
+      </p>
+      <p style="color: white">Licensed|MIT</p>
+    </div>
+    <div
+      id="ctrlDash"
+      style="
+        width: 50%;
+        height: 100dvh;
+        background: #111;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px;
+      "
+    >
+      <h4>1.0.0v</h4>
+      <h1>Settings</h1>
+      <h3>Reseting</h3>
+      <button id="reset-hi">Reset HI</button>
+      <button id="reset-heart">Reset Hearts</button>
+      <button id="reset-total">Reset Total</button>
+    </div>
+    <div
+      id="help"
+      style="
+        width: 100%;
+        height: 100dvh;
+        background: #111;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 40px;
+      "
+    >
+      <h1>Instructions</h1>
+      <h2>Press'H'to close</h2>
+      <ol>
+        <li>
+          <p>You will have 5 tries ( attempts ) to achieve the final score</p>
+        </li>
+        <li>
+          <p>
+            Attempts will be indicated by green hearts in the top left corner.
+          </p>
+          <img src="./path/help-1.png" width="197" height="57" />
+        </li>
+        <li>
+          <p>After 5 attempts, you will receive your final score.</p>
+          <img src="./path/help-2.png" width="240" height="208" />
+        </li>
+        <li>
+          <p>
+            If your final mark exceeds ( final mark ), you’ll receive a small reward.
+          </p>
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>
